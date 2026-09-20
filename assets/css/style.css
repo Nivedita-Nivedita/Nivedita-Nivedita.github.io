@@ -1,0 +1,311 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --color-bg: #faf9f6;
+  --color-surface: #ffffff;
+  --color-ink: #1c2430;
+  --color-ink-soft: #4a5568;
+  --color-muted: #7b8794;
+  --color-accent: #8a5a2b;
+  --color-accent-soft: #f4ece1;
+  --color-navy: #1b2a41;
+  --color-border: #e6e1d8;
+  --max-width: 880px;
+  --radius: 10px;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+a:hover, a:focus {
+  border-bottom-color: var(--color-accent);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--color-navy);
+  line-height: 1.25;
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
+h2 { font-size: 1.55rem; margin-top: 2.2em; }
+h3 { font-size: 1.15rem; margin-top: 1.6em; color: var(--color-ink); }
+
+p { margin: 0 0 1em; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  background: var(--color-navy);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-bar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+}
+.brand:hover { border: none; opacity: 0.85; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.82);
+  font-size: 0.92rem;
+  border: none;
+  padding: 0.25rem 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+@media (max-width: 760px) {
+  .nav-toggle { display: inline-block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.9rem;
+    width: 100%;
+    padding: 1rem 0 1.4rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-bar { flex-wrap: wrap; }
+}
+
+/* ---------- Hero (home page) ---------- */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, rgba(27,42,65,0.78), rgba(27,42,65,0.55)), url("../images/banner.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 4.5rem 0 3.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero p.tagline {
+  color: rgba(255,255,255,0.85);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* ---------- Layout blocks ---------- */
+main {
+  padding: 3rem 0 4rem;
+}
+
+.bio-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .bio-layout { grid-template-columns: 1fr; }
+  .bio-photo { order: -1; max-width: 240px; margin: 0 auto; }
+}
+
+.bio-photo img {
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(27,42,65,0.15);
+}
+
+.contact-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.note {
+  margin-top: 2.5rem;
+  padding: 1rem 1.2rem;
+  background: var(--color-accent-soft);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  color: var(--color-ink-soft);
+}
+
+/* ---------- Lists / cards ---------- */
+.entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entry-list li {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.entry-list li:first-child { padding-top: 0; }
+
+.entry-title { font-weight: 600; color: var(--color-ink); }
+
+.entry-meta {
+  display: block;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  margin-top: 0.15rem;
+}
+
+.entry-links a {
+  font-size: 0.85rem;
+  margin-right: 0.9rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.tag.upcoming { background: #e4f0ea; color: #2f6b4f; }
+
+.section-intro {
+  color: var(--color-ink-soft);
+  max-width: 65ch;
+}
+
+.subgroup-heading {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  margin-top: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.year-heading {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-navy);
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.term-block {
+  margin: 1.6rem 0;
+}
+
+.term-block h3 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.term-block .institution {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.course-list {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+}
+
+.course-list li {
+  padding: 0.55rem 0;
+  border-top: 1px dashed var(--color-border);
+}
+.course-list li:first-child { border-top: none; }
+
+.role {
+  display: block;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 2rem 0 3rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.site-footer p { margin: 0.3em 0; }
