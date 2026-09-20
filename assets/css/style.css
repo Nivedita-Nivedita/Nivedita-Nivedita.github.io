@@ -5,8 +5,8 @@
   --color-ink: #3b3355;        /* muted indigo-plum, softer than black */
   --color-ink-soft: #675e7d;
   --color-muted: #9c8fa8;
-  --color-accent: #b8654f;     /* dusty terracotta */
-  --color-accent-soft: #f3e1d8;
+  --color-accent: #5b56a3;     /* soft indigo-violet */
+  --color-accent-soft: #e9e4f5;
   --color-lavender: #7c74a8;   /* Monet water-lily lavender */
   --color-sage: #6f9271;       /* garden sage green */
   --color-gold: #c99a3e;       /* wheat-field gold */
@@ -176,9 +176,17 @@ p { margin: 0 0 1em; }
   padding: 3rem 0 2.4rem;
 }
 
+.hero--tall {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
 .hero--research    { background-image: url("../images/banner-research.jpg"); }
 .hero--publications { background-image: url("../images/banner-publications.jpg"); }
-.hero--talks        { background-image: url("../images/banner-talks.jpg"); }
+.hero--talks        { background-image: url("../images/banner-talks.jpg"); background-position: center 25%; }
 .hero--teaching     { background-image: url("../images/banner-teaching.jpg"); }
 .hero--conferences  { background-image: url("../images/banner-conferences.jpg"); }
 .hero--videos       { background-image: url("../images/banner-videos.jpg"); }
