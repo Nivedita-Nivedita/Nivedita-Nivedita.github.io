@@ -232,8 +232,34 @@ main {
 .contact-links {
   margin-top: 1rem;
   display: flex;
+  align-items: center;
   gap: 0.9rem;
   font-size: 0.95rem;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none !important;
+  color: var(--color-accent);
+  transition: opacity 0.15s ease;
+}
+
+.social-icon-link:hover { opacity: 0.65; }
+
+.social-icon-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.contact-social {
+  align-items: center;
+}
+.contact-social .social-icon-link svg {
+  width: 22px;
+  height: 22px;
 }
 
 .link-button {
