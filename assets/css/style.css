@@ -1,18 +1,21 @@
-/* ---------- Design tokens ---------- */
+/* ---------- Design tokens: pastel impressionist palette ---------- */
 :root {
-  --color-bg: #faf9f6;
-  --color-surface: #ffffff;
-  --color-ink: #1c2430;
-  --color-ink-soft: #4a5568;
-  --color-muted: #7b8794;
-  --color-accent: #8a5a2b;
-  --color-accent-soft: #f4ece1;
-  --color-navy: #1b2a41;
-  --color-border: #e6e1d8;
+  --color-bg: #fbf3e7;         /* warm linen canvas */
+  --color-surface: #fffdf8;
+  --color-ink: #3b3355;        /* muted indigo-plum, softer than black */
+  --color-ink-soft: #675e7d;
+  --color-muted: #9c8fa8;
+  --color-accent: #b8654f;     /* dusty terracotta */
+  --color-accent-soft: #f3e1d8;
+  --color-lavender: #7c74a8;   /* Monet water-lily lavender */
+  --color-sage: #6f9271;       /* garden sage green */
+  --color-gold: #c99a3e;       /* wheat-field gold */
+  --color-navy: #3a3d6b;       /* Starry Night indigo */
+  --color-border: #e9dcc8;
   --max-width: 880px;
-  --radius: 10px;
-  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --radius: 14px;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -43,14 +46,21 @@ a:hover, a:focus {
 
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-weight: 600;
   color: var(--color-navy);
-  line-height: 1.25;
+  line-height: 1.2;
   margin: 0 0 0.6em;
 }
 
-h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
-h2 { font-size: 1.55rem; margin-top: 2.2em; }
-h3 { font-size: 1.15rem; margin-top: 1.6em; color: var(--color-ink); }
+h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; }
+h2 {
+  font-size: 1.55rem;
+  margin-top: 2.4em;
+  position: relative;
+  display: inline-block;
+}
+h3 { font-size: 1.15rem; margin-top: 1.6em; color: var(--color-ink); font-weight: 600; }
 
 p { margin: 0 0 1em; }
 
@@ -62,11 +72,12 @@ p { margin: 0 0 1em; }
 
 /* ---------- Header / nav ---------- */
 .site-header {
-  background: var(--color-navy);
+  background: linear-gradient(120deg, #3a3d6b, #514a7d 60%, #6a5580);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 50;
+  box-shadow: 0 2px 14px rgba(58, 61, 107, 0.25);
 }
 
 .nav-bar {
@@ -81,6 +92,7 @@ p { margin: 0 0 1em; }
 
 .brand {
   font-family: var(--font-serif);
+  font-weight: 600;
   font-size: 1.3rem;
   letter-spacing: 0.04em;
   color: #fff;
@@ -118,7 +130,7 @@ p { margin: 0 0 1em; }
 .nav-links a:hover,
 .nav-links a.active {
   color: #fff;
-  border-bottom: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-gold);
 }
 
 @media (max-width: 760px) {
@@ -134,23 +146,41 @@ p { margin: 0 0 1em; }
   .nav-bar { flex-wrap: wrap; }
 }
 
-/* ---------- Hero (home page) ---------- */
+/* ---------- Hero banners ---------- */
 .hero {
   position: relative;
-  background: linear-gradient(180deg, rgba(27,42,65,0.78), rgba(27,42,65,0.55)), url("../images/banner.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: color;
   color: #fff;
-  padding: 4.5rem 0 3.5rem;
   text-align: center;
 }
 
-.hero h1 {
-  color: #fff;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.hero--home {
+  padding: 4.5rem 0 3.5rem;
+  background-image: linear-gradient(160deg, rgba(107, 127, 176, 0.88), rgba(166, 143, 194, 0.88)), url("../images/banner-home.jpg");
 }
 
+.hero--page {
+  padding: 3rem 0 2.4rem;
+}
+
+.hero--research   { background-image: linear-gradient(160deg, rgba(155, 139, 196, 0.9), rgba(201, 169, 209, 0.85)), url("../images/banner-research.jpg"); }
+.hero--publications{ background-image: linear-gradient(160deg, rgba(111, 146, 113, 0.88), rgba(188, 209, 160, 0.82)), url("../images/banner-publications.jpg"); }
+.hero--talks       { background-image: linear-gradient(160deg, rgba(184, 101, 79, 0.88), rgba(224, 180, 143, 0.82)), url("../images/banner-talks.jpg"); }
+.hero--teaching    { background-image: linear-gradient(160deg, rgba(139, 171, 111, 0.88), rgba(217, 195, 122, 0.82)), url("../images/banner-teaching.jpg"); }
+.hero--conferences { background-image: linear-gradient(160deg, rgba(183, 132, 160, 0.88), rgba(226, 168, 193, 0.82)), url("../images/banner-conferences.jpg"); }
+.hero--videos      { background-image: linear-gradient(160deg, rgba(143, 134, 187, 0.88), rgba(232, 162, 160, 0.82)), url("../images/banner-videos.jpg"); }
+
+.hero h1 {
+  color: #fff;
+  letter-spacing: 0.06em;
+}
+
+.hero--home h1 { text-transform: uppercase; }
+
 .hero p.tagline {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.9);
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.1rem;
@@ -175,7 +205,8 @@ main {
 
 .bio-photo img {
   border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(27,42,65,0.15);
+  box-shadow: 0 10px 28px rgba(58, 61, 107, 0.18);
+  border: 6px solid var(--color-surface);
 }
 
 .contact-links {
@@ -236,7 +267,7 @@ main {
   vertical-align: middle;
 }
 
-.tag.upcoming { background: #e4f0ea; color: #2f6b4f; }
+.tag.upcoming { background: #e3ecdd; color: var(--color-sage); }
 
 .section-intro {
   color: var(--color-ink-soft);
@@ -245,7 +276,7 @@ main {
 
 .subgroup-heading {
   font-family: var(--font-sans);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -255,12 +286,12 @@ main {
 }
 
 .year-heading {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--color-navy);
-  margin-top: 2rem;
-  margin-bottom: 0.3rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-lavender);
+  margin-top: 2.2rem;
+  margin-bottom: 0.4rem;
   padding-bottom: 0.3rem;
   border-bottom: 2px solid var(--color-border);
 }
