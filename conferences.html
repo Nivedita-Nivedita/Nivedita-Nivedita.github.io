@@ -93,9 +93,18 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; <span id="year"></span> Nivedita</p>
+    <p>&copy; <span id="year"></span> Nivedita &middot; <button type="button" class="link-button" data-open-contact>Contact</button></p>
   </div>
 </footer>
+
+<dialog id="contact-dialog" class="contact-dialog">
+  <form method="dialog" class="contact-dialog-inner">
+    <button type="submit" class="dialog-close" aria-label="Close">&times;</button>
+    <h2>Get in Touch</h2>
+    <p>The best way to reach me is by email:</p>
+    <p class="contact-email"><a href="mailto:nivedita@perimeterinstitute.ca">nivedita@perimeterinstitute.ca</a></p>
+  </form>
+</dialog>
 
 <script src="assets/js/main.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

@@ -13,4 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
       a.classList.add("active");
     }
   });
+
+  var contactDialog = document.getElementById("contact-dialog");
+  if (contactDialog) {
+    document.querySelectorAll("[data-open-contact]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        contactDialog.showModal();
+      });
+    });
+  }
 });

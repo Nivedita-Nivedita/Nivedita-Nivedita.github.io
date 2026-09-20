@@ -49,8 +49,8 @@
       <p>My research interests lie mainly at the intersection of <strong>Mathematical Physics, Functional Analysis, and Higher Category Theory</strong>. More specifically, I am interested in the study of <em>axiomatic approaches to various aspects of Quantum Field Theory</em>, in particular those axiomatisations that are inherently (higher) categorical and functorial. I like spending time thinking about what is a good definition, and what makes a good definition a good definition.</p>
 
       <div class="contact-links">
-        <a href="https://www.maths.ox.ac.uk/people/nivedita.nivedita" target="_blank" rel="noopener">Oxford profile</a>
-        <a href="mailto:miss.nivedita@merton.ox.ac.uk">Email</a>
+        <a href="https://www.ias.edu/scholars/nivedita-nivedita" target="_blank" rel="noopener">IAS profile</a>
+        <button type="button" class="link-button" data-open-contact>Contact Me</button>
       </div>
     </div>
     <div class="bio-photo">
@@ -65,9 +65,18 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; <span id="year"></span> Nivedita</p>
+    <p>&copy; <span id="year"></span> Nivedita &middot; <button type="button" class="link-button" data-open-contact>Contact</button></p>
   </div>
 </footer>
+
+<dialog id="contact-dialog" class="contact-dialog">
+  <form method="dialog" class="contact-dialog-inner">
+    <button type="submit" class="dialog-close" aria-label="Close">&times;</button>
+    <h2>Get in Touch</h2>
+    <p>The best way to reach me is by email:</p>
+    <p class="contact-email"><a href="mailto:nivedita@perimeterinstitute.ca">nivedita@perimeterinstitute.ca</a></p>
+  </form>
+</dialog>
 
 <script src="assets/js/main.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
