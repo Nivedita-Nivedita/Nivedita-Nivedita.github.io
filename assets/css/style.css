@@ -151,30 +151,42 @@ p { margin: 0 0 1em; }
   position: relative;
   background-size: cover;
   background-position: center;
-  background-blend-mode: color;
   color: #fff;
   text-align: center;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 16, 35, 0.32), rgba(20, 16, 35, 0.4));
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
 .hero--home {
   padding: 4.5rem 0 3.5rem;
-  background-image: linear-gradient(160deg, rgba(107, 127, 176, 0.88), rgba(166, 143, 194, 0.88)), url("../images/banner-home.jpg");
+  background-image: url("../images/banner-home.jpg");
 }
 
 .hero--page {
   padding: 3rem 0 2.4rem;
 }
 
-.hero--research   { background-image: linear-gradient(160deg, rgba(155, 139, 196, 0.9), rgba(201, 169, 209, 0.85)), url("../images/banner-research.jpg"); }
-.hero--publications{ background-image: linear-gradient(160deg, rgba(111, 146, 113, 0.88), rgba(188, 209, 160, 0.82)), url("../images/banner-publications.jpg"); }
-.hero--talks       { background-image: linear-gradient(160deg, rgba(184, 101, 79, 0.88), rgba(224, 180, 143, 0.82)), url("../images/banner-talks.jpg"); }
-.hero--teaching    { background-image: linear-gradient(160deg, rgba(139, 171, 111, 0.88), rgba(217, 195, 122, 0.82)), url("../images/banner-teaching.jpg"); }
-.hero--conferences { background-image: linear-gradient(160deg, rgba(183, 132, 160, 0.88), rgba(226, 168, 193, 0.82)), url("../images/banner-conferences.jpg"); }
-.hero--videos      { background-image: linear-gradient(160deg, rgba(143, 134, 187, 0.88), rgba(232, 162, 160, 0.82)), url("../images/banner-videos.jpg"); }
+.hero--research    { background-image: url("../images/banner-research.jpg"); }
+.hero--publications { background-image: url("../images/banner-publications.jpg"); }
+.hero--talks        { background-image: url("../images/banner-talks.jpg"); }
+.hero--teaching     { background-image: url("../images/banner-teaching.jpg"); }
+.hero--conferences  { background-image: url("../images/banner-conferences.jpg"); }
+.hero--videos       { background-image: url("../images/banner-videos.jpg"); }
 
 .hero h1 {
   color: #fff;
   letter-spacing: 0.06em;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
 }
 
 .hero--home h1 { text-transform: uppercase; }
