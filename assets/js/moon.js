@@ -10,7 +10,7 @@
     var theta = phase * 2 * Math.PI;
     var rx = Math.abs(r * Math.cos(theta));
     var outerSweep = phase < 0.5 ? 1 : 0;
-    var innerSweep = (phase < 0.25 || phase > 0.75) ? 1 : 0;
+    var innerSweep = Math.floor(phase * 4) % 2;
     return [
       "M", cx, cy - r,
       "A", r, r, 0, 0, outerSweep, cx, cy + r,
