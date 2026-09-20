@@ -65,6 +65,25 @@
     <p>Some of my favourite writers are Jorge Luis Borges, Samuel Beckett, Franz Kafka, Albert Camus, Kahlil Gibran, Oscar Wilde, Bertrand Russell, and Alexander Grothendieck.</p>
     <p>I love hiking and being in the mountains. I also love the moon.</p>
 
+    <div class="moon-widget" id="moon-widget">
+      <div class="moon-disc" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="48" class="moon-dark"></circle>
+          <path id="moon-lit-path" class="moon-lit"></path>
+        </svg>
+      </div>
+      <div class="moon-info">
+        <p class="moon-phase-name" id="moon-phase-name">Reading the sky&hellip;</p>
+        <div class="moon-stats">
+          <p class="moon-stat"><span>Illumination</span><span id="moon-illumination">—</span></p>
+          <p class="moon-stat"><span>Moonrise</span><span id="moon-moonrise">—</span></p>
+          <p class="moon-stat"><span>Moonset</span><span id="moon-moonset">—</span></p>
+          <p class="moon-stat"><span>Next Full Moon</span><span id="moon-nextfull">—</span></p>
+        </div>
+        <p class="moon-location" id="moon-location"></p>
+      </div>
+    </div>
+
     <ul class="entry-list">
       <li><span class="entry-title"><a href="https://arxiv.org/pdf/math/9404236" target="_blank" rel="noopener">On Proof and Progress in Mathematics</a></span><span class="entry-meta">William P. Thurston</span></li>
       <li><span class="entry-title"><a href="https://proofsandprompts.com/newsfeed/#news-matilde-marcolli" target="_blank" rel="noopener">Blog: Proofs and Prompts</a></span></li>
@@ -90,5 +109,7 @@
 
 <script src="assets/js/main.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.js"></script>
+<script src="assets/js/moon.js"></script>
 </body>
 </html>
