@@ -9,7 +9,7 @@
   --color-accent-soft: #e9e4f5;
   --color-lavender: #7c74a8;   /* Monet water-lily lavender */
   --color-sage: #6f9271;       /* garden sage green */
-  --color-gold: #c99a3e;       /* wheat-field gold */
+  --color-rose: #d98bbd;       /* Monet rose-pink, for nav accent */
   --color-navy: #3a3d6b;       /* Starry Night indigo */
   --color-border: #e9dcc8;
   --max-width: 880px;
@@ -130,7 +130,7 @@ p { margin: 0 0 1em; }
 .nav-links a:hover,
 .nav-links a.active {
   color: #fff;
-  border-bottom: 2px solid var(--color-gold);
+  border-bottom: 2px solid var(--color-rose);
 }
 
 @media (max-width: 760px) {
