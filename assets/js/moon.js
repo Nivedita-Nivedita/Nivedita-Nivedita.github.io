@@ -4,7 +4,7 @@
     "Full Moon", "Waning Gibbous", "Last Quarter", "Waning Crescent"
   ];
   var SYNODIC_MONTH = 29.530588853;
-  var FALLBACK = { lat: 43.4643, lon: -80.5204, label: "Shown for Waterloo, ON" };
+  var FALLBACK = { lat: 43.4643, lon: -80.5204, label: "Shown for Waterloo, ON — allow location for your current location" };
 
   function moonLitPathData(phase, r, cx, cy) {
     var theta = phase * 2 * Math.PI;
