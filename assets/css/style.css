@@ -225,6 +225,16 @@ p { margin: 0 0 1em; }
 .hero--conferences  { background-image: url("../images/banner-conferences.jpg"); }
 .hero--videos       { background-image: url("../images/banner-videos.jpg"); }
 
+/* On phone-width screens the hero is much taller relative to its width
+   than the sculpture photo, so background-size:cover crops the sides
+   rather than the top/bottom. A center crop was losing the figure's
+   face and raised arm off the left edge; shifting the anchor reveals
+   them. Desktop/tablet crop this image height-wise instead, so they
+   are unaffected. */
+@media (max-width: 600px) {
+  .hero--publications { background-position: 17% center; }
+}
+
 .hero h1 {
   color: #fff;
   letter-spacing: 0.06em;
