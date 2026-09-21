@@ -8,11 +8,11 @@
 
   var isTouch = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
 
-  var angle = 9;
+  var angle = 18;
   var angularVel = 0;
   var stiffness = 10;
   var damping = 2.3;
-  var idleAmplitude = 1.6;
+  var idleAmplitude = 3.4;
   var idlePeriodMs = 4200;
   var pointerTarget = 0;
   var lastTime = null;
@@ -26,7 +26,7 @@
       var dy = e.clientY - cy;
       var dist = Math.sqrt(dx * dx + dy * dy);
       var radius = 220;
-      var maxPush = 11;
+      var maxPush = 22;
       if (dist < radius) {
         var strength = 1 - dist / radius;
         var t = (dx / radius) * maxPush * strength;

@@ -425,7 +425,7 @@ dialog.contact-dialog::backdrop {
 }
 
 .swing-svg {
-  width: 60px;
+  width: 76px;
   height: auto;
   overflow: visible;
 }
@@ -456,6 +456,19 @@ dialog.contact-dialog::backdrop {
 
 .swing-seat {
   fill: var(--color-accent);
+}
+
+.swing-figure-head,
+.swing-figure-dress {
+  fill: var(--color-rose);
+}
+
+.swing-figure-limb,
+.swing-figure-hair {
+  stroke: var(--color-rose);
+  stroke-width: 2;
+  stroke-linecap: round;
+  fill: none;
 }
 
 .swing-caption {
