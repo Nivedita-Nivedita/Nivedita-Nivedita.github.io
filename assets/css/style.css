@@ -185,7 +185,7 @@ p { margin: 0 0 1em; }
 }
 
 .hero--research    { background-image: url("../images/banner-research.jpg"); }
-.hero--publications { background-image: url("../images/publications-sculpture.jpg"); }
+.hero--publications { background-image: url("../images/publications-sculpture.jpg?v=2"); }
 .hero--talks        { background-image: url("../images/banner-talks.jpg"); background-position: center 25%; }
 .hero--teaching     { background-image: url("../images/banner-teaching.jpg"); }
 .hero--conferences  { background-image: url("../images/banner-conferences.jpg"); }
