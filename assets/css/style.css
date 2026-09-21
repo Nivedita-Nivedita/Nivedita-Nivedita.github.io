@@ -460,13 +460,13 @@ dialog.contact-dialog::backdrop {
 
 .swing-figure-head,
 .swing-figure-dress {
-  fill: var(--color-rose);
+  fill: #8c4a6e;
 }
 
-.swing-figure-limb,
-.swing-figure-hair {
-  stroke: var(--color-rose);
-  stroke-width: 2;
+.swing-figure-leg,
+.swing-figure-arm {
+  stroke: #8c4a6e;
+  stroke-width: 3;
   stroke-linecap: round;
   fill: none;
 }
