@@ -405,6 +405,16 @@ dialog.contact-dialog::backdrop {
   color: var(--color-ink-soft);
 }
 
+.cv-link {
+  margin-top: 1.4rem;
+  text-align: center;
+}
+
+.cv-link a {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+}
+
 /* ---------- Lists / cards ---------- */
 .entry-list {
   list-style: none;
