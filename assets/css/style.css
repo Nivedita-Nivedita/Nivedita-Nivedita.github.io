@@ -86,11 +86,12 @@ p { margin: 0 0 1em; }
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1.6rem;
   min-height: 64px;
 }
 
 .brand {
+  flex: none;
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: 1.3rem;
@@ -102,25 +103,26 @@ p { margin: 0 0 1em; }
 
 .nav-toggle {
   display: none;
-  background: none;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 6px;
-  color: #fff;
-  font-size: 1rem;
-  padding: 0.35rem 0.6rem;
-  cursor: pointer;
 }
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.4rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1.2rem;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0.2rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
+.nav-links li { flex: none; }
+
 .nav-links a {
+  display: inline-block;
+  white-space: nowrap;
   color: rgba(255,255,255,0.82);
   font-size: 0.92rem;
   border: none;
@@ -133,17 +135,10 @@ p { margin: 0 0 1em; }
   border-bottom: 2px solid var(--color-rose);
 }
 
-@media (max-width: 760px) {
-  .nav-toggle { display: inline-block; }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 0.9rem;
-    width: 100%;
-    padding: 1rem 0 1.4rem;
-  }
-  .nav-links.open { display: flex; }
-  .nav-bar { flex-wrap: wrap; }
+@media (max-width: 640px) {
+  .nav-bar { padding: 0 1rem; gap: 1rem; }
+  .nav-links { gap: 0.9rem; }
+  .nav-links a { font-size: 0.85rem; }
 }
 
 /* ---------- Hero banners ---------- */
