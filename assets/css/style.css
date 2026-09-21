@@ -515,6 +515,27 @@ dialog.contact-dialog::backdrop {
   .photo-gallery img { height: 220px; }
 }
 
+/* ---------- Single page photo ---------- */
+.page-photo {
+  margin: 1.8rem 0 2.2rem;
+  text-align: center;
+}
+
+.page-photo img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 26px rgba(58, 61, 107, 0.18);
+}
+
+.page-photo figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
 /* ---------- Video embed ---------- */
 .video-embed {
   margin: 1.6rem 0 2.2rem;
