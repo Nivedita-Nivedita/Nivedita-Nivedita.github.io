@@ -195,6 +195,15 @@ p { margin: 0 0 1em; }
 .hero--home {
   padding: 4.5rem 0 3.5rem;
   background-image: url("../images/banner-home.jpg");
+  /* The moon in this photo sits well below center (~62-87% down the
+     frame). On narrow/short viewports the hero is taller relative to
+     the image so background-size:cover crops the sides, not the top/
+     bottom, and this has no effect. On wide desktop viewports the hero
+     is much wider than it is tall, so cover crops vertically instead —
+     a plain center position was cutting the moon off at the bottom.
+     Shifting the vertical anchor down reveals the moon fully without
+     changing the hero's height, padding, or any other layout rule. */
+  background-position: center 85%;
 }
 
 .hero--page {
