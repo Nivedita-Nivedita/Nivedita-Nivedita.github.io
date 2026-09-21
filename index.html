@@ -8,7 +8,7 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=7" />
+<link rel="stylesheet" href="assets/css/style.css?v=8" />
 </head>
 <body data-page="home">
 
@@ -62,6 +62,20 @@
   <div class="container">
     <p class="note">I do not officially have a last name/surname, so in publications and on my official documents I am just <strong>Nivedita</strong>.</p>
     <p class="cv-link"><a href="assets/files/CV_Nivedita.pdf" target="_blank" rel="noopener">Download my CV (PDF)</a></p>
+
+    <div class="swing-widget" id="swing-widget">
+      <svg class="swing-svg" viewBox="0 0 100 110" aria-hidden="true">
+        <line class="swing-leg" x1="12" y1="10" x2="4" y2="105"></line>
+        <line class="swing-leg" x1="88" y1="10" x2="96" y2="105"></line>
+        <line class="swing-bar" x1="12" y1="10" x2="88" y2="10"></line>
+        <g class="swing-group" id="swing-group">
+          <line class="swing-rope" x1="38" y1="10" x2="38" y2="72"></line>
+          <line class="swing-rope" x1="62" y1="10" x2="62" y2="72"></line>
+          <rect class="swing-seat" x="30" y="72" width="40" height="9" rx="4.5"></rect>
+        </g>
+      </svg>
+      <p class="swing-caption">mood swing</p>
+    </div>
   </div>
 </main>
 
@@ -86,5 +100,6 @@
 
 <script src="assets/js/main.js?v=2"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="assets/js/swing.js"></script>
 </body>
 </html>
