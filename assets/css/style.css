@@ -458,19 +458,6 @@ dialog.contact-dialog::backdrop {
   fill: var(--color-accent);
 }
 
-.swing-figure-head,
-.swing-figure-dress {
-  fill: #8c4a6e;
-}
-
-.swing-figure-leg,
-.swing-figure-arm {
-  stroke: #8c4a6e;
-  stroke-width: 3;
-  stroke-linecap: round;
-  fill: none;
-}
-
 .swing-caption {
   font-family: var(--font-serif);
   font-style: italic;
