@@ -242,6 +242,11 @@ main {
   align-items: center;
   justify-content: center;
   border-bottom: none !important;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
   color: var(--color-accent);
   transition: opacity 0.15s ease;
 }
@@ -398,6 +403,7 @@ dialog.contact-dialog::backdrop {
 }
 
 .tag.upcoming { background: #e3ecdd; color: var(--color-sage); }
+.tag.speaker { background: #f7e1ec; color: #c15b8f; }
 
 .section-intro {
   color: var(--color-ink-soft);
