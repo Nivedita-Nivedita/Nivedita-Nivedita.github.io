@@ -225,11 +225,7 @@ p { margin: 0 0 1em; }
 .hero--conferences  { background-image: url("../images/banner-conferences.jpg"); }
 .hero--videos       { background-image: url("../images/banner-videos.jpg"); }
 
-.hero--undergrad {
-  background-image: none;
-  background: linear-gradient(135deg, var(--color-sage), var(--color-lavender) 55%, var(--color-rose));
-}
-.hero--undergrad::before { background: rgba(20, 16, 35, 0.18); }
+.hero--undergrad { background-image: url("../images/banner-undergrad.jpg"); }
 
 /* On phone-width screens the hero is much taller relative to its width
    than the sculpture photo, so background-size:cover crops the sides
