@@ -225,6 +225,12 @@ p { margin: 0 0 1em; }
 .hero--conferences  { background-image: url("../images/banner-conferences.jpg"); }
 .hero--videos       { background-image: url("../images/banner-videos.jpg"); }
 
+.hero--undergrad {
+  background-image: none;
+  background: linear-gradient(135deg, var(--color-sage), var(--color-lavender) 55%, var(--color-rose));
+}
+.hero--undergrad::before { background: rgba(20, 16, 35, 0.18); }
+
 /* On phone-width screens the hero is much taller relative to its width
    than the sculpture photo, so background-size:cover crops the sides
    rather than the top/bottom. A center crop was losing the figure's
@@ -726,4 +732,96 @@ dialog.contact-dialog::backdrop {
   .moon-widget { flex-direction: column; text-align: center; }
   .moon-stats { grid-template-columns: 1fr 1fr; }
   .moon-stat { flex-direction: column; gap: 0; text-align: center; }
+}
+
+/* ---------- Undergrad project cards ---------- */
+.category-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.category-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.category-heading.materials-science .category-dot,
+.category-heading.materials-science { color: var(--color-sage); }
+.category-heading.materials-science .category-dot { background: var(--color-sage); }
+
+.category-heading.physics { color: var(--color-lavender); }
+.category-heading.physics .category-dot { background: var(--color-lavender); }
+
+.category-heading.cognitive-science { color: #c15b8f; }
+.category-heading.cognitive-science .category-dot { background: var(--color-rose); }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin: 1.2rem 0 2.6rem;
+}
+
+.project-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem 1.2rem;
+  border-top: 5px solid var(--color-accent);
+  box-shadow: 0 8px 22px rgba(58, 61, 107, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(58, 61, 107, 0.16);
+}
+
+.project-card--materials-science { border-top-color: var(--color-sage); }
+.project-card--physics { border-top-color: var(--color-lavender); }
+.project-card--cognitive-science { border-top-color: var(--color-rose); }
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.project-card p {
+  color: var(--color-ink-soft);
+  font-size: 0.92rem;
+  margin-bottom: 0.9rem;
+  flex-grow: 1;
+}
+
+.project-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+.project-card-links a {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.project-card--materials-science .project-card-links a { color: var(--color-sage); border-bottom-color: transparent; }
+.project-card--materials-science .project-card-links a:hover { border-bottom-color: var(--color-sage); }
+.project-card--physics .project-card-links a { color: var(--color-lavender); }
+.project-card--physics .project-card-links a:hover { border-bottom-color: var(--color-lavender); }
+.project-card--cognitive-science .project-card-links a { color: #c15b8f; }
+.project-card--cognitive-science .project-card-links a:hover { border-bottom-color: #c15b8f; }
+
+/* ---------- Milestones ---------- */
+.milestone-list li { border-bottom-color: var(--color-border); }
+.milestone-list .entry-title::before {
+  content: "\2726";
+  color: var(--color-rose);
+  margin-right: 0.4rem;
+  font-size: 0.8rem;
 }
