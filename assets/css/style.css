@@ -759,6 +759,9 @@ dialog.contact-dialog::backdrop {
 .category-heading.cognitive-science { color: #c15b8f; }
 .category-heading.cognitive-science .category-dot { background: var(--color-rose); }
 
+.category-heading.mathematics { color: var(--color-navy); }
+.category-heading.mathematics .category-dot { background: var(--color-navy); }
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -785,6 +788,7 @@ dialog.contact-dialog::backdrop {
 .project-card--materials-science { border-top-color: var(--color-sage); }
 .project-card--physics { border-top-color: var(--color-lavender); }
 .project-card--cognitive-science { border-top-color: var(--color-rose); }
+.project-card--mathematics { border-top-color: var(--color-navy); }
 
 .project-card h3 {
   margin-top: 0;
@@ -816,6 +820,8 @@ dialog.contact-dialog::backdrop {
 .project-card--physics .project-card-links a:hover { border-bottom-color: var(--color-lavender); }
 .project-card--cognitive-science .project-card-links a { color: #c15b8f; }
 .project-card--cognitive-science .project-card-links a:hover { border-bottom-color: #c15b8f; }
+.project-card--mathematics .project-card-links a { color: var(--color-navy); }
+.project-card--mathematics .project-card-links a:hover { border-bottom-color: var(--color-navy); }
 
 /* ---------- Milestones ---------- */
 .milestone-list li { border-bottom-color: var(--color-border); }
