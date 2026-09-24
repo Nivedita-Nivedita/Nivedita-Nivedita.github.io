@@ -827,12 +827,3 @@ dialog.contact-dialog::backdrop {
 .project-card--cognitive-science .project-card-links a:hover { border-bottom-color: #c15b8f; }
 .project-card--mathematics .project-card-links a { color: var(--color-navy); }
 .project-card--mathematics .project-card-links a:hover { border-bottom-color: var(--color-navy); }
-
-/* ---------- Milestones ---------- */
-.milestone-list li { border-bottom-color: var(--color-border); }
-.milestone-list .entry-title::before {
-  content: "\2726";
-  color: var(--color-rose);
-  margin-right: 0.4rem;
-  font-size: 0.8rem;
-}
